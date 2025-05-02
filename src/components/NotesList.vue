@@ -9,9 +9,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, watch } from 'vue';
-import { readDir, writeFile } from '@tauri-apps/api/fs';
+import { readTextFile, writeFile } from '@tauri-apps/plugin-fs';
 
 const props = defineProps({ folder: String });
 const notes = ref([]);
